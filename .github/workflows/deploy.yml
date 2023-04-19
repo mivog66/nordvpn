@@ -23,8 +23,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: mivog66
+          password: dhGl0b0lus##
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
