@@ -1,5 +1,5 @@
 FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy
-LABEL maintainer="Julio Gutierrez julio.guti+nordvpn@pm.me"
+LABEL maintainer=""
 
 ARG NORDVPN_VERSION=3.16.1
 ARG DEBIAN_FRONTEND=noninteractive
@@ -22,3 +22,4 @@ RUN apt-get update -y && \
 COPY /rootfs /
 ENV S6_CMD_WAIT_FOR_SERVICES=1
 CMD nord_login && nord_config && nord_connect && nord_migrate && nord_watch
+CMD sh
